@@ -18,7 +18,7 @@ You need to install Git to clone repository
 
       run command in terminal:
 
-      git clone https://github.com/gmaisu/poli-presale.git
+      git clone https://github.com/gmaisu/poli.git
 
 After installation and cloning, you have to run next command in project directory
 
@@ -33,13 +33,16 @@ Now you have to replace parameters
 
 [//]: #
 
-      OWNER_PRIVATE_KEY=
+      DEPLOYER_WALLET_PRIVATE_KEY=
+      FUND_WALLET_ADDRESS=
 
       For example,
         Private key is 63760e0ff05d32357ad55808e63c342bcaa2479fb8dcfbc95327b3cb3bbdd3a5
+        Fund Wallet address is 0x2A8BF6D36BDfB6053Fdd52020A0b63B8Dab2b1aE
 
      Replace them like
-        OWNER_PRIVATE_KEY=63760e0ff05d32357ad55808e63c342bcaa2479fb8dcfbc95327b3cb3bbdd3a5
+        DEPLOYER_WALLET_PRIVATE_KEY=63760e0ff05d32357ad55808e63c342bcaa2479fb8dcfbc95327b3cb3bbdd3a5
+        FUND_WALLET_ADDRESS=0x2A8BF6D36BDfB6053Fdd52020A0b63B8Dab2b1aE
 
 3. To deploy smart contracts, run next command
 

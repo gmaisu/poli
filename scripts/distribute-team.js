@@ -20,9 +20,11 @@ function generateAddress() {
 }
 
 // Function to distribute tokens randomly
-function distributeTokens(totalTokens, walletAddresses) {
+function distributeTokens(totalTokens, numberOfAddresses) {
     // Generate random proportions
-    let proportions = walletAddresses.map(() => Math.random());
+    let proportions = Array.from({ length: numberOfAddresses }, () =>
+        Math.random()
+    );
     let totalProportion = proportions.reduce((sum, p) => sum + p, 0);
 
     // Normalize proportions to sum up to totalTokens
@@ -35,11 +37,7 @@ function distributeTokens(totalTokens, walletAddresses) {
         totalTokens - distributedTokens.reduce((sum, t) => sum + t, 0);
     distributedTokens[distributedTokens.length - 1] += difference;
 
-    // Map wallet addresses to token amounts
-    return walletAddresses.reduce((distribution, wallet, index) => {
-        distribution[wallet] = distributedTokens[index];
-        return distribution;
-    }, {});
+    return distributedTokens;
 }
 
 async function batchTransfer(recipients, amounts) {

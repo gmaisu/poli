@@ -39,7 +39,9 @@ const CONTRACT_ABI = [
 export const web3 = new Web3(process.env.BSC_RCP_URL);
 
 export const CONTRACT_ADDRESS = process.env.TOKEN_CONTRACT_ADDRESS;
-export const OWNER_PRIVATE_KEY = `0x${process.env.OWNER_WALLET_PRIVATE_KEY}`;
+export const OWNER_PRIVATE_KEY = `0x${process.env.DEPLOYER_WALLET_PRIVATE_KEY}`;
+export const FUND_WALLET_ADDRESS = process.env.FUND_WALLET_ADDRESS;
+export const API_SERVICE_URL = process.env.ASSET_TRANSFERS_SERVICE_URL;
 
 export const TEAM_ADDRESSES_COUNT = 100; // Number of addresses to generate
 
