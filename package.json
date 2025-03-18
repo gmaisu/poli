@@ -1,0 +1,37 @@
+{
+    "name": "poli",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "team:test": "dotenv -e .env node .\\scripts\\distribute-team.js",
+        "team:prod": "dotenv -e .env.production node .\\scripts\\distribute-team.js",
+        "partipicants:test": "dotenv -e .env node .\\scripts\\distribute-partipicants.js",
+        "partipicants:prod": "dotenv -e .env.production node .\\scripts\\distribute-partipicants.js",
+        "migrate:test": "dotenv -e .env -- npx truffle migrate --network bsc_testnet",
+        "migrate:prod": "dotenv -e .env.production -- npx truffle migrate --network bsc_mainnet",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gmaisu/poli.git"
+    },
+    "author": "Giorgi Maisuradze",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gmaisu/poli/issues"
+    },
+    "homepage": "https://github.com/gmaisu/poli#readme",
+    "description": "",
+    "dependencies": {
+        "@openzeppelin/contracts": "^5.2.0",
+        "@truffle/hdwallet-provider": "^2.1.15",
+        "csv-writer": "^1.6.0",
+        "dotenv": "^16.4.7",
+        "ethereumjs-wallet": "^1.0.2",
+        "web3": "^4.16.0"
+    },
+    "devDependencies": {
+        "dotenv-cli": "^8.0.0",
+        "truffle": "^5.11.5"
+    }
+}
